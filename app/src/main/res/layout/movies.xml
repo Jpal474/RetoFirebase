@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView
+        android:id="@+id/ivMovieThumbnail"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@color/translucent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+        <TextView
+            android:id="@+id/tvMovieType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Movie Type"
+            android:background="@color/translucent"
+            android:textSize="15dp"
+            app:layout_constraintLeft_toRightOf="@id/ivPoster"
+            app:layout_constraintRight_toLeftOf="@id/tvMovieGenre"
+            app:layout_constraintTop_toBottomOf="@id/ivMovieThumbnail"
+            app:layout_constraintBottom_toTopOf="@+id/tvMovieTitle"
+            android:layout_margin="10dp"
+            />
+
+    <TextView
+        android:id="@+id/tvMovieGenre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Movie Genre"
+        android:background="@color/translucent"
+        android:textSize="15dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/tvMovieType"
+        app:layout_constraintBottom_toTopOf="@+id/tvMovieTitle"
+        app:layout_constraintTop_toBottomOf="@id/ivMovieThumbnail"
+        android:layout_margin="10dp"
+        />
+    <TextView
+        android:id="@+id/ivPoster"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:text="poster"
+        android:src="@color/translucent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivMovieThumbnail"
+        app:layout_constraintRight_toLeftOf="@+id/tvMovieType"
+        android:layout_marginVertical="8dp"/>
+    <TextView
+        android:id="@+id/tvMovieTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tvMovieType"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/tvMovieCountry"
+        android:layout_marginHorizontal="10dp"
+        android:textSize="20dp"
+        android:text="Example of a Movie Title"
+        android:layout_marginLeft="50dp"
+        android:maxLines="2"
+
+        />
+    <TextView
+        android:id="@+id/tvMovieimdbID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:text="Movie imdbID"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvMovieTitle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/tvMovieCountry"
+        android:layout_marginRight="5dp"
+        />
+    <TextView
+        android:id="@+id/tvMovieCountry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Movie Country"
+        android:textSize="15sp"
+        app:layout_constraintLeft_toRightOf="@id/tvMovieimdbID"
+        app:layout_constraintRight_toLeftOf="@+id/tvMovieYear"
+        app:layout_constraintTop_toBottomOf="@+id/tvMovieTitle"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        />
+
+    <TextView
+        android:id="@+id/tvMovieYear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Movie Year"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/tvMovieCountry"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvMovieTitle"
+
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
